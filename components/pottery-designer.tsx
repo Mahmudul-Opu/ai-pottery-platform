@@ -16,11 +16,11 @@ interface DesignSettings {
 }
 
 const SHAPE_OPTIONS = [
-  { value: 'vase', label: 'Vase', emoji: '🏺' },
-  { value: 'bowl', label: 'Bowl', emoji: '🥣' },
-  { value: 'pot', label: 'Pot', emoji: '🫙' },
-  { value: 'plate', label: 'Plate', emoji: '🍽️' },
-  { value: 'pitcher', label: 'Pitcher', emoji: '🏺' },
+  { value: 'vase', label: 'Vase', icon: '🏺' },
+  { value: 'bowl', label: 'Bowl', icon: '🥣' },
+  { value: 'pot', label: 'Pot', icon: '🫙' },
+  { value: 'plate', label: 'Plate', icon: '🍽️' },
+  { value: 'pitcher', label: 'Pitcher', icon: '🏺' },
 ];
 
 const COLOR_OPTIONS = [
@@ -88,28 +88,30 @@ export function PotteryDesigner() {
 
   // Generate pottery visualization based on settings
   const getPotteryVisualization = () => {
-    const shapeEmoji = SHAPE_OPTIONS.find(s => s.value === design.shape)?.emoji || '🏺';
+    const shapeIcon = SHAPE_OPTIONS.find(s => s.value === design.shape)?.icon || '🏺';
     
     return (
       <div className="relative w-full h-[400px] flex items-center justify-center">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 rounded-lg" />
+        {/* White background */}
+        <div className="absolute inset-0 bg-white rounded-lg" />
         
         {/* Pottery visualization */}
         <div className="relative z-10 flex flex-col items-center gap-4">
-          <div
-            className="text-[200px] transition-all duration-500 filter drop-shadow-2xl"
+          <img
+            src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=500&h=500&fit=crop"
+            alt="Pottery Design"
+            className="w-80 h-80 object-contain transition-all duration-500"
             style={{
               transform: `scale(${design.size / 50})`,
               filter: `
-                drop-shadow(0 20px 40px ${design.color}40)
-                ${design.glaze === 'glossy' ? 'brightness(1.2)' : ''}
-                ${design.glaze === 'metallic' ? 'saturate(1.5)' : ''}
+                drop-shadow(0 20px 40px rgba(0,0,0,0.2))
+                ${design.glaze === 'glossy' ? 'brightness(1.1) contrast(1.1)' : ''}
+                ${design.glaze === 'metallic' ? 'saturate(1.3) brightness(1.05)' : ''}
+                ${design.glaze === 'crackle' ? 'contrast(1.15)' : ''}
+                hue-rotate(${design.color === '#8B4513' ? '0deg' : design.color === '#CD853F' ? '10deg' : design.color === '#F5DEB3' ? '20deg' : design.color === '#4A5568' ? '180deg' : design.color === '#2C5F2D' ? '90deg' : design.color === '#1E3A8A' ? '220deg' : '0deg'})
               `,
             }}
-          >
-            {shapeEmoji}
-          </div>
+          />
           
           {/* Pattern overlay indicator */}
           {design.pattern !== 'solid' && (
@@ -207,8 +209,8 @@ export function PotteryDesigner() {
                     }
                   `}
                 >
-                  <span className="text-3xl">{shape.emoji}</span>
-                  <span className="text-xs font-medium">{shape.label}</span>
+                  <span className="text-4xl">{shape.icon}</span>
+                  <span className="text-xs font-medium text-center">{shape.label}</span>
                 </button>
               ))}
             </div>
