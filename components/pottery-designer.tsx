@@ -94,12 +94,15 @@ export function PotteryDesigner() {
         <div className="absolute inset-0 bg-white rounded-lg" />
         
         {/* Pottery photo */}
-        <div className="relative z-10 flex flex-col items-center">
+        <div className="relative z-10 flex items-center justify-center w-full h-full">
           <img
-            src="/vase.jpg"
+            src="/vase-removebg-preview.png"
             alt="Traditional Bangladeshi Pottery"
-            className="w-full max-w-md h-auto object-contain transition-all duration-500"
+            className="object-contain transition-all duration-500"
             style={{
+              width: '350px',
+              height: '450px',
+              maxWidth: '100%',
               transform: `scale(${design.size / 50})`,
               filter: `
                 drop-shadow(0 25px 50px rgba(0,0,0,0.15))
