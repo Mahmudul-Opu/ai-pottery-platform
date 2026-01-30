@@ -96,7 +96,7 @@ export function PotteryDesigner() {
         {/* Pottery photo */}
         <div className="relative z-10 flex items-center justify-center w-full h-full">
           <img
-            src="/vase-removebg-preview.png"
+            src="/vase-removebg-preview2.png"
             alt="Traditional Bangladeshi Pottery"
             className="object-contain transition-all duration-500"
             style={{
