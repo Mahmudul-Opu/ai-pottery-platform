@@ -11,7 +11,20 @@ def create_app(config_class=Config):
     
     # Initialize extensions
     db.init_app(app)
-    CORS(app)
+    
+    # Configure CORS for Vercel frontend
+    CORS(app, resources={
+        r"/api/*": {
+            "origins": [
+                "http://localhost:3000",
+                "https://ai-pottery-platform.vercel.app",
+                "https://*.vercel.app"
+            ],
+            "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+            "allow_headers": ["Content-Type", "Authorization"]
+        }
+    })
+    
     JWTManager(app)
     
     # Register blueprints
