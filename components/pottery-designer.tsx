@@ -96,7 +96,7 @@ export function PotteryDesigner() {
         {/* Pottery photo */}
         <div className="relative z-10 flex flex-col items-center">
           <img
-            src="https://i.postimg.cc/rFJ5YkQN/6334827138560757744.jpg"
+            src="/vase.jpg"
             alt="Traditional Bangladeshi Pottery"
             className="w-full max-w-md h-auto object-contain transition-all duration-500"
             style={{
@@ -186,6 +186,33 @@ export function PotteryDesigner() {
 
       {/* Design Controls */}
       <div className="space-y-6">
+        {/* Shape Selection */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Shape</CardTitle>
+            <CardDescription>Choose your pottery form</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-5 gap-3">
+              {SHAPE_OPTIONS.map((shape) => (
+                <button
+                  key={shape.value}
+                  onClick={() => updateDesign({ shape: shape.value as any })}
+                  className={`
+                    p-4 rounded-lg border-2 text-sm font-medium transition-all
+                    ${design.shape === shape.value
+                      ? 'border-orange-500 bg-orange-50 dark:bg-orange-950 text-orange-900 dark:text-orange-100'
+                      : 'border-slate-200 dark:border-slate-700 hover:border-orange-300 text-slate-700 dark:text-slate-300'
+                    }
+                  `}
+                >
+                  {shape.label}
+                </button>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Color Selection */}
         <Card>
           <CardHeader>
