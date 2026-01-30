@@ -1,0 +1,358 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Bangladeshi Pottery Theme - Terracotta, Emerald & Gold */
+  --background: oklch(0.98 0.01 75);
+  --foreground: oklch(0.20 0.02 50);
+  
+  /* Terracotta Primary */
+  --primary: oklch(0.55 0.14 45);
+  --primary-foreground: oklch(0.98 0.01 75);
+  
+  /* Ivory Card */
+  --card: oklch(0.97 0.01 85);
+  --card-foreground: oklch(0.20 0.02 50);
+  
+  /* Popover */
+  --popover: oklch(0.98 0.01 75);
+  --popover-foreground: oklch(0.20 0.02 50);
+  
+  /* Secondary - Sandy Beige */
+  --secondary: oklch(0.92 0.03 80);
+  --secondary-foreground: oklch(0.35 0.05 50);
+  
+  /* Muted */
+  --muted: oklch(0.94 0.02 75);
+  --muted-foreground: oklch(0.50 0.03 50);
+  
+  /* Accent - Emerald Green */
+  --accent: oklch(0.45 0.15 155);
+  --accent-foreground: oklch(0.98 0.01 75);
+  
+  /* Destructive */
+  --destructive: oklch(0.55 0.20 27);
+  --destructive-foreground: oklch(0.98 0.01 75);
+  
+  /* Borders & Inputs */
+  --border: oklch(0.88 0.03 75);
+  --input: oklch(0.92 0.02 75);
+  --ring: oklch(0.65 0.12 50);
+  
+  /* Gold Accent */
+  --gold: oklch(0.75 0.15 85);
+  --gold-foreground: oklch(0.25 0.05 50);
+  
+  /* Terracotta Variants */
+  --terracotta-light: oklch(0.75 0.10 50);
+  --terracotta-dark: oklch(0.45 0.12 40);
+  
+  /* Emerald Variants */
+  --emerald: oklch(0.50 0.18 155);
+  --emerald-dark: oklch(0.35 0.12 155);
+  
+  /* Charts */
+  --chart-1: oklch(0.55 0.14 45);
+  --chart-2: oklch(0.50 0.18 155);
+  --chart-3: oklch(0.75 0.15 85);
+  --chart-4: oklch(0.65 0.12 50);
+  --chart-5: oklch(0.45 0.12 40);
+  
+  --radius: 0.75rem;
+  
+  /* Sidebar */
+  --sidebar: oklch(0.97 0.01 85);
+  --sidebar-foreground: oklch(0.20 0.02 50);
+  --sidebar-primary: oklch(0.55 0.14 45);
+  --sidebar-primary-foreground: oklch(0.98 0.01 75);
+  --sidebar-accent: oklch(0.92 0.03 80);
+  --sidebar-accent-foreground: oklch(0.35 0.05 50);
+  --sidebar-border: oklch(0.88 0.03 75);
+  --sidebar-ring: oklch(0.65 0.12 50);
+}
+
+.dark {
+  --background: oklch(0.18 0.02 50);
+  --foreground: oklch(0.95 0.01 75);
+  
+  --primary: oklch(0.65 0.14 45);
+  --primary-foreground: oklch(0.15 0.02 50);
+  
+  --card: oklch(0.22 0.02 50);
+  --card-foreground: oklch(0.95 0.01 75);
+  
+  --popover: oklch(0.20 0.02 50);
+  --popover-foreground: oklch(0.95 0.01 75);
+  
+  --secondary: oklch(0.28 0.02 50);
+  --secondary-foreground: oklch(0.90 0.01 75);
+  
+  --muted: oklch(0.25 0.02 50);
+  --muted-foreground: oklch(0.65 0.02 75);
+  
+  --accent: oklch(0.55 0.15 155);
+  --accent-foreground: oklch(0.15 0.02 50);
+  
+  --destructive: oklch(0.45 0.18 27);
+  --destructive-foreground: oklch(0.95 0.01 75);
+  
+  --border: oklch(0.30 0.02 50);
+  --input: oklch(0.28 0.02 50);
+  --ring: oklch(0.55 0.10 50);
+  
+  --gold: oklch(0.70 0.15 85);
+  --gold-foreground: oklch(0.15 0.02 50);
+  
+  --terracotta-light: oklch(0.65 0.12 50);
+  --terracotta-dark: oklch(0.40 0.10 40);
+  
+  --emerald: oklch(0.55 0.15 155);
+  --emerald-dark: oklch(0.40 0.12 155);
+  
+  --chart-1: oklch(0.65 0.14 45);
+  --chart-2: oklch(0.55 0.15 155);
+  --chart-3: oklch(0.70 0.15 85);
+  --chart-4: oklch(0.55 0.10 50);
+  --chart-5: oklch(0.50 0.10 40);
+  
+  --sidebar: oklch(0.20 0.02 50);
+  --sidebar-foreground: oklch(0.95 0.01 75);
+  --sidebar-primary: oklch(0.65 0.14 45);
+  --sidebar-primary-foreground: oklch(0.15 0.02 50);
+  --sidebar-accent: oklch(0.28 0.02 50);
+  --sidebar-accent-foreground: oklch(0.90 0.01 75);
+  --sidebar-border: oklch(0.30 0.02 50);
+  --sidebar-ring: oklch(0.55 0.10 50);
+}
+
+@theme inline {
+  --font-sans: 'Inter', 'Inter Fallback', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', 'Playfair Display Fallback', Georgia, serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback', monospace;
+  --font-bengali: 'Noto Sans Bengali', 'Noto Sans Bengali Fallback', sans-serif;
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-terracotta-light: var(--terracotta-light);
+  --color-terracotta-dark: var(--terracotta-dark);
+  --color-emerald: var(--emerald);
+  --color-emerald-dark: var(--emerald-dark);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Bengali Font Utility */
+.font-bengali {
+  font-family: var(--font-bengali);
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(139, 69, 19, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(139, 69, 19, 0.5); }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(218, 165, 32, 0.3), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Clay Texture Overlay */
+.clay-texture {
+  position: relative;
+}
+
+.clay-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Gold Foil Effect */
+.gold-foil {
+  background: linear-gradient(135deg, #DAA520 0%, #FFD700 25%, #DAA520 50%, #FFD700 75%, #DAA520 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Magnetic Hover Effect */
+.magnetic-hover {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.magnetic-hover:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Scroll Progress */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--gold));
+  z-index: 9999;
+  transition: width 0.1s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary), var(--terracotta-dark));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--terracotta-dark);
+}
+
+/* Focus Styles for Accessibility */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  :root {
+    --primary: oklch(0.45 0.18 45);
+    --foreground: oklch(0.10 0.02 50);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
