@@ -42,10 +42,13 @@ def create_app(config_class=Config):
     
     return app
 
+# Create app instance for gunicorn
+app = create_app()
 
 if __name__ == '__main__':
-    app = create_app()
+    import os
+    port = int(os.environ.get('PORT', 8000))
     print("🚀 Flask server starting...")
-    print("📍 Running on http://localhost:8000")
+    print(f"📍 Running on port {port}")
     print("🔧 Environment: Development")
-    app.run(debug=True, host='127.0.0.1', port=8000)
+    app.run(debug=True, host='0.0.0.0', port=port)
