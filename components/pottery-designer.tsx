@@ -88,27 +88,24 @@ export function PotteryDesigner() {
 
   // Generate pottery visualization based on settings
   const getPotteryVisualization = () => {
-    const shapeIcon = SHAPE_OPTIONS.find(s => s.value === design.shape)?.icon || '🏺';
-    
     return (
-      <div className="relative w-full h-[400px] flex items-center justify-center">
-        {/* White background */}
+      <div className="relative w-full h-[500px] flex items-center justify-center">
+        {/* Pure white background */}
         <div className="absolute inset-0 bg-white rounded-lg" />
         
-        {/* Pottery visualization */}
-        <div className="relative z-10 flex flex-col items-center gap-4">
+        {/* Pottery photo */}
+        <div className="relative z-10 flex flex-col items-center">
           <img
-            src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=500&h=500&fit=crop"
-            alt="Pottery Design"
-            className="w-80 h-80 object-contain transition-all duration-500"
+            src="https://i.postimg.cc/rFJ5YkQN/6334827138560757744.jpg"
+            alt="Traditional Bangladeshi Pottery"
+            className="w-full max-w-md h-auto object-contain transition-all duration-500"
             style={{
               transform: `scale(${design.size / 50})`,
               filter: `
-                drop-shadow(0 20px 40px rgba(0,0,0,0.2))
-                ${design.glaze === 'glossy' ? 'brightness(1.1) contrast(1.1)' : ''}
-                ${design.glaze === 'metallic' ? 'saturate(1.3) brightness(1.05)' : ''}
-                ${design.glaze === 'crackle' ? 'contrast(1.15)' : ''}
-                hue-rotate(${design.color === '#8B4513' ? '0deg' : design.color === '#CD853F' ? '10deg' : design.color === '#F5DEB3' ? '20deg' : design.color === '#4A5568' ? '180deg' : design.color === '#2C5F2D' ? '90deg' : design.color === '#1E3A8A' ? '220deg' : '0deg'})
+                drop-shadow(0 25px 50px rgba(0,0,0,0.15))
+                ${design.glaze === 'glossy' ? 'brightness(1.15) contrast(1.1)' : ''}
+                ${design.glaze === 'metallic' ? 'saturate(1.4) brightness(1.1)' : ''}
+                ${design.glaze === 'crackle' ? 'contrast(1.2) brightness(0.95)' : ''}
               `,
             }}
           />
@@ -189,34 +186,6 @@ export function PotteryDesigner() {
 
       {/* Design Controls */}
       <div className="space-y-6">
-        {/* Shape Selection */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Shape</CardTitle>
-            <CardDescription>Choose your pottery form</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-5 gap-3">
-              {SHAPE_OPTIONS.map((shape) => (
-                <button
-                  key={shape.value}
-                  onClick={() => updateDesign({ shape: shape.value as any })}
-                  className={`
-                    flex flex-col items-center gap-2 p-4 rounded-lg border-2 transition-all
-                    ${design.shape === shape.value
-                      ? 'border-orange-500 bg-orange-50 dark:bg-orange-950'
-                      : 'border-slate-200 dark:border-slate-700 hover:border-orange-300'
-                    }
-                  `}
-                >
-                  <span className="text-4xl">{shape.icon}</span>
-                  <span className="text-xs font-medium text-center">{shape.label}</span>
-                </button>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-
         {/* Color Selection */}
         <Card>
           <CardHeader>
