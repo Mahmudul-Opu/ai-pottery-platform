@@ -8,8 +8,8 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import { Sparkles, Globe, MessageSquare, Tag, Image, Copy, RefreshCw, AlertCircle } from 'lucide-react';
-import Navigation from '@/components/navigation';
-import Footer from '@/components/footer';
+import { Navigation } from '@/components/navigation';
+import { Footer } from '@/components/footer';
 
 export default function MarketingToolsPage() {
   const [productData, setProductData] = useState({
@@ -66,7 +66,7 @@ export default function MarketingToolsPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
-      <Navigation />
+      <Navigation language={language} setLanguage={setLanguage} />
       
       <main className="container mx-auto px-4 py-24">
         {/* Header */}
@@ -341,7 +341,7 @@ export default function MarketingToolsPage() {
         </div>
       </main>
 
-      <Footer />
+      <Footer language={language} />
     </div>
   );
 }
