@@ -5,8 +5,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { BookOpen, Camera, Upload, BarChart3, Sparkles, Globe, ArrowRight, CheckCircle2, HelpCircle } from 'lucide-react';
-import Navigation from '@/components/navigation';
-import Footer from '@/components/footer';
 
 export default function LearningPage() {
   const [language, setLanguage] = useState<'en' | 'bn'>('en');
