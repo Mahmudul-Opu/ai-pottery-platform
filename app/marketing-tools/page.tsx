@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
-import { Sparkles, Globe, MessageSquare, Tag, Image, Copy, RefreshCw, AlertCircle } from 'lucide-react';
+import { Sparkles, Globe, MessageSquare, Tag, Image, Copy, RefreshCw, AlertCircle, ArrowLeft, Home } from 'lucide-react';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 
@@ -100,6 +100,17 @@ export default function MarketingToolsPage() {
             </Button>
           </div>
         </div>
+
+        {/* Back Button */}
+        <Button
+          onClick={() => window.location.href = '/'}
+          variant="outline"
+          size="lg"
+          className="mb-6 gap-2"
+        >
+          <ArrowLeft className="h-5 w-5" />
+          {language === 'en' ? 'Back to Home' : 'হোমে ফিরুন'}
+        </Button>
 
         {/* AI Disclaimer */}
         <Card className="mb-8 border-orange-200 bg-orange-50 dark:bg-orange-950 dark:border-orange-800">

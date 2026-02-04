@@ -16,7 +16,9 @@ import {
   Star,
   Lightbulb,
   MessageCircle,
-  ThumbsUp
+  ThumbsUp,
+  ArrowLeft,
+  Home
 } from "lucide-react";
 
 export default function RecommendationsPage() {
@@ -335,6 +337,17 @@ export default function RecommendationsPage() {
     <div className="min-h-screen bg-gradient-to-b from-purple-50 via-pink-50 to-amber-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
+        {/* Back Button */}
+        <Button
+          onClick={() => window.location.href = '/'}
+          variant="outline"
+          size="lg"
+          className="mb-6 gap-2"
+        >
+          <ArrowLeft className="h-5 w-5" />
+          {language === "en" ? "Back to Home" : "হোমে ফিরুন"}
+        </Button>
+
         {/* Header */}
         <div className="flex justify-between items-start mb-8">
           <div>
