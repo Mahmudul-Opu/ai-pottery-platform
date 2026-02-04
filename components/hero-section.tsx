@@ -292,6 +292,40 @@ export function HeroSection({ language }: HeroSectionProps) {
                     <ArrowRight className="h-6 w-6 text-muted-foreground group-hover:text-gold group-hover:translate-x-2 transition-all" />
                   </div>
                 </button>
+
+                {/* AI Marketing Tools Card */}
+                <button onClick={() => window.location.href = '/marketing-tools'} className="group relative p-6 lg:p-8 rounded-2xl bg-card border border-border hover:border-purple-500 transition-all duration-300 text-left magnetic-hover overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative flex items-center gap-4">
+                    <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shadow-lg">
+                      <Sparkles className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-serif text-xl font-bold text-foreground group-hover:text-purple-500 transition-colors">
+                        {language === "en" ? "AI Marketing Tools" : "AI মার্কেটিং টুলস"}
+                      </h3>
+                      <p className="text-muted-foreground">{language === "en" ? "Generate content & boost sales" : "কন্টেন্ট তৈরি করুন এবং বিক্রয় বাড়ান"}</p>
+                    </div>
+                    <ArrowRight className="h-6 w-6 text-muted-foreground group-hover:text-purple-500 group-hover:translate-x-2 transition-all" />
+                  </div>
+                </button>
+
+                {/* Product Recommendations Card */}
+                <button onClick={() => window.location.href = '/recommendations'} className="group relative p-6 lg:p-8 rounded-2xl bg-card border border-border hover:border-pink-500 transition-all duration-300 text-left magnetic-hover overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-pink-500/0 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative flex items-center gap-4">
+                    <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center shadow-lg">
+                      <ShoppingBag className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-serif text-xl font-bold text-foreground group-hover:text-pink-500 transition-colors">
+                        {language === "en" ? "Smart Recommendations" : "স্মার্ট সুপারিশ"}
+                      </h3>
+                      <p className="text-muted-foreground">{language === "en" ? "AI-powered product suggestions" : "AI-চালিত পণ্য সুপারিশ"}</p>
+                    </div>
+                    <ArrowRight className="h-6 w-6 text-muted-foreground group-hover:text-pink-500 group-hover:translate-x-2 transition-all" />
+                  </div>
+                </button>
               </div>
 
               {/* Featured Pottery Preview */}
