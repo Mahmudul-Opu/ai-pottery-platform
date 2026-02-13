@@ -217,7 +217,7 @@ export default function RecommendationsPage() {
       location: language === "en" ? "Manikganj" : "মানিকগঞ্জ",
       priceBDT: 150,
       priceUSD: 1.40,
-      image: "/Terracotta Sigree  Incense Burner.png",
+      image: "/Terracotta-Incense-Burner.png",
       matchScore: 92,
       viewedBy: 189,
       rating: 4.9,
