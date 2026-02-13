@@ -5,9 +5,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { 
-  Sparkles, 
-  Globe, 
+import {
+  Sparkles,
+  Globe,
   Heart,
   ShoppingCart,
   TrendingUp,
@@ -32,77 +32,77 @@ export default function RecommendationsPage() {
     en: {
       title: "Personalized Product Suggestions",
       subtitle: "AI-Powered Recommendations Based on Your Preferences",
-      
+
       // Loading
       loading: "Finding perfect pottery for you...",
-      
+
       // Sections
       forYou: "Recommended For You",
       whyRecommended: "Why This is Recommended",
       basedOn: "Based On Your Interests",
       similarItems: "Similar Items You May Like",
-      
+
       // Explanations
       explainTitle: "Why We Recommend This",
       explainDesc: "Our AI considers multiple factors to suggest the best pottery for you",
-      
+
       factors: {
         browsing: "Your Browsing Pattern",
         browsingDesc: "Products you viewed recently",
-        
+
         preferences: "Your Preferences",
         preferencesDesc: "Categories and styles you prefer",
-        
+
         popularity: "Community Favorites",
         popularityDesc: "Highly rated by other buyers",
-        
+
         artisan: "Artisan Quality",
         artisanDesc: "From trusted, skilled artisans",
-        
+
         traditional: "Traditional Craftsmanship",
         traditionalDesc: "Authentic heritage techniques",
-        
+
         priceRange: "Price Match",
         priceRangeDesc: "Within your budget range"
       },
-      
+
       // Actions
       viewDetails: "View Details",
       addToCart: "Add to Cart",
       explainWhy: "Why this?",
       closeExplanation: "Close",
-      
+
       // Stats
       matchScore: "Match Score",
       viewedBy: "Viewed by",
       buyers: "buyers",
       rating: "Rating",
-      
+
       // Empty State
       noRecommendations: "No Recommendations Yet",
       noRecommendationsDesc: "Browse some products to get personalized suggestions!",
       browseCatalog: "Browse Catalog",
-      
+
       // AI Transparency
       aiNotice: {
         title: "How Our AI Works",
         desc: "Recommendations are based on your browsing history and preferences. We don't track you across other websites or sell your data. Your privacy is protected."
       },
-      
+
       sessionBased: "Session-Based Recommendations",
       sessionDesc: "Recommendations reset when you close your browser - we respect your privacy",
-      
+
       // Features
       features: {
         personalized: "Personalized Just For You",
         personalizedDesc: "Curated based on your interests and browsing behavior",
-        
+
         explainable: "Transparent AI",
         explainableDesc: "Understand why each item is recommended to you",
-        
+
         privacy: "Privacy First",
         privacyDesc: "Session-based tracking, no persistent data collection",
-        
+
         quality: "Verified Quality",
         qualityDesc: "All recommended products from verified artisans"
       }
@@ -110,77 +110,77 @@ export default function RecommendationsPage() {
     bn: {
       title: "ব্যক্তিগত পণ্য সুপারিশ",
       subtitle: "আপনার পছন্দের উপর ভিত্তি করে AI-চালিত সুপারিশ",
-      
+
       // Loading
       loading: "আপনার জন্য নিখুঁত মৃৎশিল্প খুঁজছি...",
-      
+
       // Sections
       forYou: "আপনার জন্য সুপারিশকৃত",
       whyRecommended: "কেন এটি সুপারিশ করা হয়েছে",
       basedOn: "আপনার আগ্রহের উপর ভিত্তি করে",
       similarItems: "অনুরূপ আইটেম যা আপনি পছন্দ করতে পারেন",
-      
+
       // Explanations
       explainTitle: "আমরা কেন এটি সুপারিশ করি",
       explainDesc: "আমাদের AI আপনার জন্য সেরা মৃৎশিল্প সুপারিশ করতে একাধিক ফ্যাক্টর বিবেচনা করে",
-      
+
       factors: {
         browsing: "আপনার ব্রাউজিং প্যাটার্ন",
         browsingDesc: "সম্প্রতি দেখা পণ্য",
-        
+
         preferences: "আপনার পছন্দ",
         preferencesDesc: "আপনার পছন্দের বিভাগ এবং শৈলী",
-        
+
         popularity: "কমিউনিটি পছন্দসই",
         popularityDesc: "অন্যান্য ক্রেতাদের দ্বারা উচ্চ রেট",
-        
+
         artisan: "কারিগর মান",
         artisanDesc: "বিশ্বস্ত, দক্ষ কারিগরদের থেকে",
-        
+
         traditional: "ঐতিহ্যবাহী কারুশিল্প",
         traditionalDesc: "খাঁটি ঐতিহ্য কৌশল",
-        
+
         priceRange: "মূল্য মিল",
         priceRangeDesc: "আপনার বাজেট সীমার মধ্যে"
       },
-      
+
       // Actions
       viewDetails: "বিস্তারিত দেখুন",
       addToCart: "কার্টে যোগ করুন",
       explainWhy: "কেন এটি?",
       closeExplanation: "বন্ধ করুন",
-      
+
       // Stats
       matchScore: "ম্যাচ স্কোর",
       viewedBy: "দেখেছেন",
       buyers: "ক্রেতা",
       rating: "রেটিং",
-      
+
       // Empty State
       noRecommendations: "এখনও কোনো সুপারিশ নেই",
       noRecommendationsDesc: "ব্যক্তিগত সুপারিশ পেতে কিছু পণ্য ব্রাউজ করুন!",
       browseCatalog: "ক্যাটালগ ব্রাউজ করুন",
-      
+
       // AI Transparency
       aiNotice: {
         title: "আমাদের AI কীভাবে কাজ করে",
         desc: "সুপারিশগুলি আপনার ব্রাউজিং ইতিহাস এবং পছন্দের উপর ভিত্তি করে। আমরা অন্যান্য ওয়েবসাইট জুড়ে আপনাকে ট্র্যাক করি না বা আপনার ডেটা বিক্রি করি না। আপনার গোপনীয়তা সুরক্ষিত।"
       },
-      
+
       sessionBased: "সেশন-ভিত্তিক সুপারিশ",
       sessionDesc: "ব্রাউজার বন্ধ করলে সুপারিশ রিসেট হয় - আমরা আপনার গোপনীয়তাকে সম্মান করি",
-      
+
       // Features
       features: {
         personalized: "শুধুমাত্র আপনার জন্য ব্যক্তিগত",
         personalizedDesc: "আপনার আগ্রহ এবং ব্রাউজিং আচরণের উপর ভিত্তি করে কিউরেটেড",
-        
+
         explainable: "স্বচ্ছ AI",
         explainableDesc: "বুঝুন কেন প্রতিটি আইটেম আপনাকে সুপারিশ করা হয়েছে",
-        
+
         privacy: "গোপনীয়তা প্রথম",
         privacyDesc: "সেশন-ভিত্তিক ট্র্যাকিং, কোনো স্থায়ী ডেটা সংগ্রহ নেই",
-        
+
         quality: "যাচাইকৃত মান",
         qualityDesc: "যাচাইকৃত কারিগরদের থেকে সমস্ত সুপারিশকৃত পণ্য"
       }
@@ -193,12 +193,12 @@ export default function RecommendationsPage() {
   const demoRecommendations = [
     {
       id: 1,
-      name: language === "en" ? "Traditional Water Pot (Kolshi)" : "ঐতিহ্যবাহী পানির পাত্র (কলসি)",
-      artisan: language === "en" ? "Rahim Ahmed" : "রহিম আহমেদ",
-      location: language === "en" ? "Narsingdi" : "নরসিংদী",
-      priceBDT: 450,
-      priceUSD: 4.20,
-      image: "🏺",
+      name: language === "en" ? "Traditional Terracotta Vase" : "ঐতিহ্যবাহী পোড়ামাটির ফুলদানি",
+      artisan: language === "en" ? "Rahim Mia" : "রহিম মিয়া",
+      location: language === "en" ? "Dhamrai" : "ধামরাই",
+      priceBDT: 100,
+      priceUSD: 0.94,
+      image: "/vase-removebg-preview2.png",
       matchScore: 95,
       viewedBy: 234,
       rating: 4.8,
@@ -210,32 +210,15 @@ export default function RecommendationsPage() {
     },
     {
       id: 2,
-      name: language === "en" ? "Decorative Flower Vase" : "সাজসজ্জা ফুলদানি",
-      artisan: language === "en" ? "Fatima Begum" : "ফাতিমা বেগম",
-      location: language === "en" ? "Bogura" : "বগুড়া",
-      priceBDT: 850,
-      priceUSD: 8.00,
-      image: "🏺",
+      name: language === "en" ? "Terracotta Incense Burner" : "পোড়ামাটির ধূপদানি",
+      artisan: language === "en" ? "Sultan Mia" : "সুলতান মিয়া",
+      location: language === "en" ? "Manikganj" : "মানিকগঞ্জ",
+      priceBDT: 150,
+      priceUSD: 1.40,
+      image: "/Terracotta Sigree Incense Burner.png",
       matchScore: 92,
       viewedBy: 189,
       rating: 4.9,
-      reasons: [
-        language === "en" ? "Matches your style preferences" : "আপনার শৈলী পছন্দ মেলে",
-        language === "en" ? "Popular in your area" : "আপনার এলাকায় জনপ্রিয়",
-        language === "en" ? "Within your budget" : "আপনার বাজেটের মধ্যে"
-      ]
-    },
-    {
-      id: 3,
-      name: language === "en" ? "Clay Cooking Pot (Hari)" : "মাটির রান্নার পাত্র (হাঁড়ি)",
-      artisan: language === "en" ? "Karim Mia" : "করিম মিয়া",
-      location: language === "en" ? "Rajshahi" : "রাজশাহী",
-      priceBDT: 650,
-      priceUSD: 6.10,
-      image: "🍲",
-      matchScore: 88,
-      viewedBy: 156,
-      rating: 4.7,
       reasons: [
         language === "en" ? "Practical & traditional" : "ব্যবহারিক এবং ঐতিহ্যবাহী",
         language === "en" ? "Excellent artisan reputation" : "চমৎকার কারিগর খ্যাতি",
@@ -243,13 +226,30 @@ export default function RecommendationsPage() {
       ]
     },
     {
+      id: 3,
+      name: language === "en" ? "Clay Coffee Mug" : "মাটির কফি মগ",
+      artisan: language === "en" ? "Karim Sheikh" : "করিম শেখ",
+      location: language === "en" ? "Shimulia" : "শিমুলিয়া",
+      priceBDT: 200,
+      priceUSD: 1.89,
+      image: "/Clay Coffee Mug.png",
+      matchScore: 88,
+      viewedBy: 156,
+      rating: 4.7,
+      reasons: [
+        language === "en" ? "Matches your style preferences" : "আপনার শৈলী পছন্দ মেলে",
+        language === "en" ? "Popular in your area" : "আপনার এলাকায় জনপ্রিয়",
+        language === "en" ? "Within your budget" : "আপনার বাজেটের মধ্যে"
+      ]
+    },
+    {
       id: 4,
-      name: language === "en" ? "Handmade Tea Cups Set" : "হাতে তৈরি চায়ের কাপ সেট",
-      artisan: language === "en" ? "Salma Khatun" : "সালমা খাতুন",
-      location: language === "en" ? "Dinajpur" : "দিনাজপুর",
-      priceBDT: 1200,
-      priceUSD: 11.30,
-      image: "☕",
+      name: language === "en" ? "Terracotta Storage Jar" : "পোড়ামাটির সংরক্ষণ পাত্র",
+      artisan: language === "en" ? "Abdul Karim" : "আব্দুল করিম",
+      location: language === "en" ? "Dhamrai" : "ধামরাই",
+      priceBDT: 250,
+      priceUSD: 2.35,
+      image: "/Terracotta Martaban (Storage Jar).png",
       matchScore: 85,
       viewedBy: 267,
       rating: 4.9,
@@ -261,36 +261,36 @@ export default function RecommendationsPage() {
     },
     {
       id: 5,
-      name: language === "en" ? "Decorative Wall Plate" : "সাজসজ্জা দেয়াল প্লেট",
-      artisan: language === "en" ? "Jahangir Alam" : "জাহাঙ্গীর আলম",
-      location: language === "en" ? "Pabna" : "পাবনা",
-      priceBDT: 950,
-      priceUSD: 8.90,
-      image: "🎨",
+      name: language === "en" ? "Tulip-Shaped Clay Bowl" : "টিউলিপ আকৃতির মাটির বাটি",
+      artisan: language === "en" ? "Jasim Uddin" : "জসিম উদ্দিন",
+      location: language === "en" ? "Shimulia" : "শিমুলিয়া",
+      priceBDT: 300,
+      priceUSD: 2.82,
+      image: "/Tulip-shaped Clay Bowl.png",
       matchScore: 82,
-      viewedBy: 134,
-      rating: 4.6,
-      reasons: [
-        language === "en" ? "Artistic home décor" : "শিল্পকলা গৃহ সাজসজ্জা",
-        language === "en" ? "Hand-painted patterns" : "হাতে আঁকা প্যাটার্ন",
-        language === "en" ? "Limited availability" : "সীমিত প্রাপ্যতা"
-      ]
-    },
-    {
-      id: 6,
-      name: language === "en" ? "Storage Jar with Lid" : "ঢাকনা সহ সংরক্ষণ পাত্র",
-      artisan: language === "en" ? "Ayesha Siddiqua" : "আয়েশা সিদ্দিকা",
-      location: language === "en" ? "Jamalpur" : "জামালপুর",
-      priceBDT: 550,
-      priceUSD: 5.20,
-      image: "🫙",
-      matchScore: 80,
       viewedBy: 198,
       rating: 4.8,
       reasons: [
         language === "en" ? "Functional & beautiful" : "কার্যকর এবং সুন্দর",
         language === "en" ? "Eco-friendly material" : "পরিবেশ বান্ধব উপাদান",
         language === "en" ? "Great value for money" : "টাকার জন্য দুর্দান্ত মূল্য"
+      ]
+    },
+    {
+      id: 6,
+      name: language === "en" ? "Terracotta Water Pot (Matka)" : "পোড়ামাটির জলের পাত্র (মাটকা)",
+      artisan: language === "en" ? "Hafiz Rahman" : "হাফিজ রহমান",
+      location: language === "en" ? "Manikganj" : "মানিকগঞ্জ",
+      priceBDT: 180,
+      priceUSD: 1.69,
+      image: "/Terracotta Matka (Water Pot).png",
+      matchScore: 90,
+      viewedBy: 312,
+      rating: 4.9,
+      reasons: [
+        language === "en" ? "Traditional bestseller" : "ঐতিহ্যবাহী বেস্টসেলার",
+        language === "en" ? "Perfect for daily use" : "দৈনন্দিন ব্যবহারের জন্য নিখুঁত",
+        language === "en" ? "Keeps water naturally cool" : "পানি প্রাকৃতিকভাবে ঠান্ডা রাখে"
       ]
     }
   ];
@@ -299,14 +299,14 @@ export default function RecommendationsPage() {
     // Simulate API call
     const loadRecommendations = async () => {
       setLoading(true);
-      
+
       // In production: fetch from API
       // const response = await fetch(`${API_URL}/api/recommendations`);
       // const data = await response.json();
-      
+
       // Simulate network delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       setRecommendations(demoRecommendations);
       setLoading(false);
     };
@@ -316,10 +316,10 @@ export default function RecommendationsPage() {
 
   const handleExplainWhy = (productId: number) => {
     setSelectedProduct(productId);
-    
+
     // In production: fetch explanation from API
     // const response = await fetch(`${API_URL}/api/recommendations/explain/${productId}`);
-    
+
     // Demo explanation
     setExplanation({
       productId,
@@ -336,7 +336,7 @@ export default function RecommendationsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 via-pink-50 to-amber-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Back Button */}
         <Button
           onClick={() => window.location.href = '/'}
@@ -420,13 +420,19 @@ export default function RecommendationsPage() {
               <Sparkles className="h-7 w-7 text-purple-600" />
               {t.forYou}
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {recommendations.map((product) => (
                 <Card key={product.id} className="bg-white border-2 border-purple-200 hover:shadow-xl transition-shadow">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-4">
-                      <div className="text-6xl">{product.image}</div>
+                      <div className="w-16 h-16 flex items-center justify-center bg-gray-50 rounded-lg overflow-hidden">
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                       <Badge className="bg-purple-600 text-white">
                         {t.matchScore}: {product.matchScore}%
                       </Badge>
@@ -477,15 +483,15 @@ export default function RecommendationsPage() {
 
                     {/* Actions */}
                     <div className="flex gap-2">
-                      <Button 
+                      <Button
                         className="flex-1 bg-purple-600 hover:bg-purple-700"
                         size="sm"
                       >
                         <ShoppingCart className="h-4 w-4 mr-1" />
                         {t.addToCart}
                       </Button>
-                      <Button 
-                        variant="outline" 
+                      <Button
+                        variant="outline"
                         size="sm"
                         onClick={() => handleExplainWhy(product.id)}
                       >
@@ -520,8 +526,8 @@ export default function RecommendationsPage() {
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-2xl text-purple-900">{t.explainTitle}</CardTitle>
-                  <Button 
-                    variant="ghost" 
+                  <Button
+                    variant="ghost"
                     size="icon"
                     onClick={() => {
                       setSelectedProduct(null);
@@ -546,7 +552,7 @@ export default function RecommendationsPage() {
                         <Badge className="bg-purple-600 text-white">{factor.weight}%</Badge>
                       </div>
                       <div className="w-full bg-purple-200 rounded-full h-2 mt-2">
-                        <div 
+                        <div
                           className="bg-purple-600 h-2 rounded-full transition-all duration-500"
                           style={{ width: `${factor.weight}%` }}
                         />
@@ -560,7 +566,7 @@ export default function RecommendationsPage() {
                     <strong>{t.sessionBased}:</strong> {t.sessionDesc}
                   </AlertDescription>
                 </Alert>
-                <Button 
+                <Button
                   className="w-full mt-4 bg-purple-600 hover:bg-purple-700"
                   onClick={() => {
                     setSelectedProduct(null);
