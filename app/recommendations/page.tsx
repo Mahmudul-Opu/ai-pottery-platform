@@ -355,6 +355,7 @@ export default function RecommendationsPage() {
           <div>
             <h1 className="text-4xl font-bold text-purple-900 mb-2">{t.title}</h1>
             <p className="text-lg text-purple-700">{t.subtitle}</p>
+            <p className="text-xs text-gray-400 mt-1">v2.0 - Updated Feb 2026</p>
           </div>
           <Button
             onClick={() => setLanguage(language === "en" ? "bn" : "en")}
