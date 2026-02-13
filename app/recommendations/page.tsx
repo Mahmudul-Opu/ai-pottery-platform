@@ -191,6 +191,7 @@ export default function RecommendationsPage() {
   const t = content[language];
 
   // Demo recommendations data (in production, fetch from API)
+  // Updated with 6 real pottery images - Feb 2026
   const demoRecommendations = [
     {
       id: 1,
