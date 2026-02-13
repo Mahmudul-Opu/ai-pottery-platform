@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -426,11 +427,14 @@ export default function RecommendationsPage() {
                 <Card key={product.id} className="bg-white border-2 border-purple-200 hover:shadow-xl transition-shadow">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-4">
-                      <div className="w-16 h-16 flex items-center justify-center bg-gray-50 rounded-lg overflow-hidden">
-                        <img
+                      <div className="w-24 h-24 flex items-center justify-center bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg overflow-hidden border-2 border-purple-200">
+                        <Image
                           src={product.image}
                           alt={product.name}
-                          className="w-full h-full object-cover"
+                          width={96}
+                          height={96}
+                          className="w-full h-full object-contain"
+                          unoptimized
                         />
                       </div>
                       <Badge className="bg-purple-600 text-white">
